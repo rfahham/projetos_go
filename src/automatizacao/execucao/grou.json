@@ -1,0 +1,25 @@
+curl -v -H'content-type:application/json' -d'
+{
+  "name":"'$RANDOM'",
+  "durationTimeMillis":10000000,
+  "project":"qa2_test_grou_dev",
+  "tags":["cenario"],
+  "notify":["mailto:qa2@corp.globo.com"],
+  "properties": {
+    "requests": [
+      {
+        "order":1,
+        "uri": "http://ziponildo-dev.gcloud.qa02.globoi.com/"
+      },
+      {
+        "order":2,
+        "uri": "http://app-raccoon-dev.gcloud.dev.globoi.com/"
+      }
+    ],
+    "numConn": 50,
+    "parallelLoaders": 1,
+    "fixedDelay" : 5000.0,
+    "followRedirect": true,
+    "monitTargets" : "zero://10.1.2.3:9100?key=10.1.2.3:8000"
+  }
+}' http://grou.dev.globoi.com/tests

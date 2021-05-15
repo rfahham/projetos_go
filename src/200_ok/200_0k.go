@@ -23,11 +23,11 @@ func main() {
 		case 1:
 			iniciarVerificacao()
 		case 2:
-			fmt.Println("Lista de URLS Status Code 200...")
+			fmt.Println("Lista de urls Status Code 200...")
 			fmt.Println("")
 			imprimeLista200()
 		case 3:
-			fmt.Println("Lista de URLS Status Code 404...")
+			fmt.Println("Lista de urls Status Code 404...")
 			fmt.Println("")
 			imprimeLista404()
 		case 4:
@@ -45,7 +45,9 @@ func main() {
 
 func exibeMenu() {
 	fmt.Println("")
-	fmt.Println("Programa para separar URLS que não sejam Status Code 200.")
+	fmt.Println("Programa para separar urls pelo seu Status Code.")
+	fmt.Println("")
+	fmt.Println("Os arquivos que serão testados estão no arquivo lista.csv")
 	fmt.Println("")
 	fmt.Println("Escolha uma das opções abaixo:")
 	fmt.Println("")

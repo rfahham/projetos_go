@@ -1,0 +1,62 @@
+CENÁRIOS
+
+/auth/time
+
+
+LOOP my_loop1 START COUNT=20
+
+ASSIGN VARIABLE <var_value Form_globoids_200k.$1>
+
+ASSIGN VARIABLE <var_key_token "X-GLB-Token: ">
+ASSIGN VARIABLE <var_key_usuario "X-GLB-Usuario: ">
+ASSIGN VARIABLE <var_header_token var_key_token var_value>
+ASSIGN VARIABLE <var_header_usuario var_key_usuario var_value>
+
+1 GET http://cartola-api-qa02.gcloud.qa02.globoi.com/auth/time <ADDITIONAL_HEADER_FROMVAR=var_header_token> <ADDITIONAL_HEADER_FROMVAR=var_header_usuario>
+
+NEXT ROW <Form_globoids_200k>
+
+LOOP my_loop1 STOP
+
+
+/auth/time/info
+
+LOOP my_loop1 START COUNT=20
+
+ASSIGN VARIABLE <var_value Form_globoids_200k.$1>
+
+ASSIGN VARIABLE <var_key_token "X-GLB-Token: ">
+ASSIGN VARIABLE <var_key_usuario "X-GLB-Usuario: ">
+ASSIGN VARIABLE <var_header_token var_key_token var_value>
+ASSIGN VARIABLE <var_header_usuario var_key_usuario var_value>
+
+1 GET http://cartola-api-qa02.gcloud.qa02.globoi.com/auth/time/info <ADDITIONAL_HEADER_FROMVAR=var_header_token> <ADDITIONAL_HEADER_FROMVAR=var_header_usuario>
+
+NEXT ROW <Form_globoids_200k>
+
+LOOP my_loop1 STOP
+
+
+/auth/ligas
+
+LOOP my_loop1 START COUNT=20
+
+ASSIGN VARIABLE <var_value Form_globoids_200k.$1>
+
+ASSIGN VARIABLE <var_key_token "X-GLB-Token: ">
+ASSIGN VARIABLE <var_key_usuario "X-GLB-Usuario: ">
+ASSIGN VARIABLE <var_header_token var_key_token var_value>
+ASSIGN VARIABLE <var_header_usuario var_key_usuario var_value>
+
+1 GET http://cartola-api-qa02.gcloud.qa02.globoi.com/auth/ligas <ADDITIONAL_HEADER_FROMVAR=var_header_token> <ADDITIONAL_HEADER_FROMVAR=var_header_usuario>
+
+NEXT ROW <Form_globoids_200k>
+
+
+/mercado/status
+
+1 GET http://cartola-api-qa02.gcloud.qa02.globoi.com/mercado/status 
+
+/atletas/mercado
+
+1 GET http://cartola-api-qa02.gcloud.qa02.globoi.com/atletas/mercado

@@ -1,0 +1,9 @@
+Executar o arquivo
+
+$ go run <nome do arquivo.go>
+
+Construindo o executável
+
+$ go build <nome do arquivo.go>
+
+./<nome do arquivo.go>

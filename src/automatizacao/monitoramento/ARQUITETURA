@@ -1,0 +1,40 @@
+ARQUITETURA
+
+## Tsuru App info ##
+Pool: qa02-pool-d
+Address: cartola-api-qa02.gcloud.qa02.globoi.com
+Hosts:
+  - 10.224.194.85
+
+## MySQL (dbaas) ##
+Hosts:
+  - competicao-01-15581103291.qa2.mysql.globoi.com
+
+## Redis Cluster ##
+Hosts:
+  - redisqa2cl-01-155740980389.qa2.redis.globoi.com
+  - redisqa2cl-02-155740980389.qa2.redis.globoi.com
+  - redisqa2cl-03-155740980389.qa2.redis.globoi.com
+  - redisqa2cl-04-155740980389.qa2.redis.globoi.com
+  - redisqa2cl-05-155740980389.qa2.redis.globoi.com
+  - redisqa2cl-06-155740980389.qa2.redis.globoi.com
+
+## Redis Sentinel ##
+Hosts:
+  - rediscarto-01-155740968484.sentinel.globoi.com
+  - rediscarto-02-155740968484.sentinel.globoi.com
+  - rediscarto-03-155740968484.sentinel.globoi.com
+
+## Redis (farm) ##
+Hosts:
+  - 10.224.208.8:10058
+  - 10.224.208.8:30058
+  - 10.224.208.8:40058
+
+## MySQL - write ##
+Hosts:
+  - qa2-57.mysql.globoi.com:3307
+
+## MySQL - read ##
+Hosts:
+  - qa2-57.mysql.globoi.com:3307

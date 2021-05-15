@@ -1,0 +1,6 @@
+Lógica de Programação
+
+O Chrome, a partir da versão 55, passou a detectar automaticamente o encoding dos arquivos. Então, é possível pensar que não é mais necessária a tag <meta charset="UTF-8">. 
+
+
+

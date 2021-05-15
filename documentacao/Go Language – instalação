@@ -1,0 +1,66 @@
+Go Language – instalação
+
+
+No MAC
+$ brew install go 
+
+
+Recentemente falamos aqui do porque usar a linguagem Go, confira o post Go Language – o que é e por que usar?
+Agora vamos mostrar como fazemos sua instalação, vamos ver os procedimentos para Linux, Windows e Mac OS.
+
+O primeiro passo é fazer o download da linguagem e suas ferramentas, para isso faça o download através do link https://golang.org/dl/. Você deve fazer o download do pacote específico para o sistema operacional que você utiliza. Feito isso, vamos à instalação. No momento da escrita desse post, Go estava na versão 1.4.1.
+
+Linux
+
+Abra um terminal e vá para o diretório que você fez o download (o arquivo deve ter um nome parecido com go1.4.1.linux-amd64.tar.gz ou go1.4.1.linux-386.tar.gz). Execute o comando:
+sudo tar -C /usr/local -xzf go1.4.1.linux-amd64.tar.gz
+Pronto, as ferramentas da linguagem já estão disponíveis no diretório /usr/local/go. Agora adicione o diretório /usr/local/go/bin à variável de ambiente PATH para ter acesso às ferramentas de qualquer lugar no Linux.
+Você pode fazer isso incluindo a linha abaixo ao seu arquivo $HOME/.profile
+
+export PATH=$PATH:/usr/local/go/bin
+Tudo pronto, agora para verificar se tudo está funcionando, execute o seguinte comando no terminal:
+
+$ go version
+Este comando deverá produzir uma saída similar à seguinte: go version go1.4.1.linux-amd64
+
+Mac OS
+
+No Mac OS temos duas formas de fazer a instalação, a mais simples é idêntica à usada no Linux, tendo como única diferença o nome do arquivo:
+
+sudo tar -C /usr/local -xzf go1.4.1.darwin-amd64-osx10.8.tar.gz
+A outra opção é utilizar o instalador automático go1.4.1.darwin-amd64-osx10.8.pkg. Execute o instalador e siga as instruções.
+
+Ambas as formas disponibilizam as ferramentas no diretório /usr/local/go. Após a instalação, assim como no Linux, devemos adicionar o diretório /usr/local/go/bin à variável de ambiente PATH, para isso no seu arquivo $HOME/.profile adicione a linha abaixo:
+
+export PATH=$PATH:/usr/local/go/bin
+Agora basta verificarmos se a instalação correu sem problemas, para isso execute no terminal o comando abaixo:
+
+$ go version
+Este comando deverá gerar uma saída parecida com: go version go1.4.1.darwin-amd64
+
+Windows
+
+Assim como no Mac OS, também temos duas formas de instalação no Windows, sendo que é recomendado usar o instalador automático. Após o download do arquivo go1.4.1.windows-amd64.msi, execute-o e siga as instruções passo a passo. Após a instalação, as variáveis de ambiente serão configuradas de forma automática.
+A outra forma é utilizando o pacote go1.4.1.windows-amd64.zip e descompactá-lo no diretório C:\Go. Após a descompactação do arquivo, adicione o diretório C:\Go\bin à variável de ambiente PATH.
+
+Para validar a instalação, execute o comando abaixo em um prompt de comando:
+
+C:\>go version
+Você deverá ver uma saída similar à go version go1.4.1 windows/amd64
+
+Pós-instalação
+
+Agora que já vimos como efetuar a instalação, vamos aos passos que devemos realizar para aproveitar as ferramentas da melhor forma. Precisamos criar um workspace (diretório para trabalho) onde nossos programas vão ser criados. A estrutura do workspace inclui três subdiretórios:
+–src: contém o código-fonte de seus programas escritos em Go (separados em pacotes), e também contém o código-fonte de pacotes de terceiros instalados em seu sistema.
+–pkg: contém objetos referentes aos pacotes.
+–bin: contém os arquivos executáveis gerados.
+
+Crie seu workspace e adicione-o à variável de ambiente GOPATH, para isso execute o comando abaixo no Linux:
+
+$ mkdir $HOME/go
+Configure a variável GOPATH no seu arquivo $HOME/.profile (caso Linux), ou nas configurações avançadas do seu Windows. Adicione também o diretório GOPATH/bin à variável de ambiente PATH através do comando no Linux:
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+Pronto, agora temos a linguagem Go instalada e configurada, e estamos prontos para escrevermos nossos programas. No próximo post vamos fazer o nosso primeiro programa usando a linguagem Go.

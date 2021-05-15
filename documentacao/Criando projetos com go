@@ -1,0 +1,165 @@
+Criando projetos com go
+
+$ go env GOPATH
+
+$ mkdir go 
+$ cd go
+$ mkdir src
+$ cd src
+$ mkdir example
+$ cd example
+
+
+----------------------------------------------------------
+
+$ touch hello.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	fmt.Printlm("Hello, World!")
+}
+
+$ go run hello.go
+
+$ go build
+
+---------------------------------------------------------
+
+$ touch variable.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	var x int = 5
+	var y int = 7
+	var sum int = x + y
+
+	fmt.Printlm(sum)
+}
+
+
+$ go run variable.go
+
+
+---------------------------------------------------------
+
+$ touch variable2.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	x := 5
+	y := 7
+	sum int := x + y
+
+	fmt.Printlm(sum)
+}
+
+
+$ go run variable2.go
+
+---------------------------------------------------------
+
+$ touch if.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	x := 5
+
+	if x > 6 {
+		fmt.Printlm("More than 6")
+	} else if x < 2 {
+
+	} else {
+
+	}
+}
+
+
+$ go run if.go
+
+
+---------------------------------------------------------
+
+$ touch lista.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	for i := 0; 1 < 5; i++{
+	fmt.Println(i)
+	}
+}
+
+$ go run lista.go
+
+---------------------------------------------------------
+
+$ touch funcao.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	result := sum(2, 3)
+	fmt.Println(result)
+}
+
+func sum(x int, y int) int {
+	return x + y
+}
+
+$ go run funcao.go
+
+---------------------------------------------------------
+
+$ touch contador.go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main () {
+	i := 7
+	inc(&i)
+	fmt.Println(i)
+}
+
+func inc(x *int) {
+	*x++
+}
+
+$ go run contador.go
+
+
+
+
+
+

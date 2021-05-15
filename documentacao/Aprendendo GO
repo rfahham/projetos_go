@@ -1,0 +1,98 @@
+https://github.com/KeKe-Li/book/blob/master/Go/The.Go.Programming.Language.pdf
+
+Aprendendo GO - https://cursos.alura.com.br/course/golang
+
+http://desenvolvedor.ninja/go-language-instalacao/
+
+
+Páginas com as principais funções em GO
+
+https://gobyexample.com/
+
+Executando diretamente do browser
+
+https://tour.golang.org/
+
+
+
+Experimento do Google criado por engenheiros em 2008
+
+Possui 25 palavras chaves
+
+
+src: contém o código-fonte dos códigos que escrevemos, como também o código-fonte de pacotes de terceiros importados em nossos programas;
+
+pkg: contém objetos referentes aos pacotes;
+
+bin: contém arquivos executáveis gerados pelos programas que compilamos.
+
+
+Criar um pasta com o nome do projeto
+
+$mkdir projeto_01
+
+$cd projeto_01
+
+
+Criar o arquivo do projeto projeto_01.go
+
+$vi projeto_01.go
+
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Printf("Hello World!\n")
+}
+
+
+
+Executar o programa
+
+$ go run <nome do projeto>.go
+
+Executar o build
+$ go build <nome do projeto>.go
+
+Executável
+$ ./<nome do projeto>.go
+
+
+
+
+
+Vamos entender a estrutura do nosso código-fonte Go
+
+Todo código-fonte em Go segue uma estrutura simples, que basicamente é dividida em três seções:
+
+Seção 1: A package é a definição do nome do pacote;
+
+Seção 2: O import é onde são importados os pacotes externos, como o de formatação "fmt" que usamos no nosso primeiro código;
+
+Seção 3: Área de código, onde serão implementos as suas funções e algoritmos do seu programa.
+
+
+
+https://golang.org/pkg/
+
+Golang: Como ler um arquivo de texto?
+https://coredump.pt/questions/36111777/golang-how-to-read-a-text-file
+
+Site que retorna status code variado
+http://random-status-code.herokuapp.com/
+
+Códigos de Status de Resposta HTTP
+https://golangcode.com/get-the-http-response-status-code/
+
+https://golangcode.com/
+
+Ler um arquivo CSV em uma estrutura
+https://golangcode.com/how-to-read-a-csv-file-into-a-struct/
+
+Capturando dados do terminal
+https://golanggo.wordpress.com/2016/05/30/entrada-e-saida-de-dados/
+
+
+
+
